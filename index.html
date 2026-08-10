@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOS · 求真系统 | 人机智能共同体</title>
+    <meta name="description" content="STOS求真系统 - 人机智能共同体的技术控制台和文档中心">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">◆</span>
+                <span class="logo-text">STOS</span>
+            </a>
+            <div class="nav-links">
+                <a href="#system">系统架构</a>
+                <a href="#docs">技术文档</a>
+                <a href="#agents">Agent状态</a>
+                <a href="https://sttt.lumenfield.work">求真智库</a>
+            </div>
+            <a href="#console" class="btn btn-primary btn-sm">控制台</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="grid-pattern"></div>
+        </div>
+        <div class="hero-content">
+            <div class="badge">
+                <span class="badge-dot"></span>
+                人机智能共同体
+            </div>
+            <h1 class="hero-title">
+                <span class="gradient-text">STOS</span> 求真系统
+            </h1>
+            <p class="hero-subtitle">
+                信念驱动的人机协作系统。84个信念锚点、六面Agent协作、蜂群调度机制。
+                探索AI与人类协同的无限可能。
+            </p>
+            <div class="hero-cta">
+                <a href="#system" class="btn btn-primary btn-lg">
+                    查看架构
+                    <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+                <a href="#docs" class="btn btn-secondary btn-lg">技术文档</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">84</span>
+                    <span class="stat-label">信念锚点</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">6</span>
+                    <span class="stat-label">Agent角色</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">74</span>
+                    <span class="stat-label">经验沉淀</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-code">
+            <div class="code-window">
+                <div class="code-header">
+                    <span class="code-dot red"></span>
+                    <span class="code-dot yellow"></span>
+                    <span class="code-dot green"></span>
+                    <span class="code-title">stos-system.ts</span>
+                </div>
+                <pre class="code-content"><code><span class="code-keyword">import</span> { <span class="code-variable">StosSystem</span> } <span class="code-keyword">from</span> <span class="code-string">'@stos/core'</span>;
+
+<span class="code-keyword">const</span> <span class="code-variable">system</span> = <span class="code-keyword">new</span> <span class="code-class">StosSystem</span>({
+  <span class="code-property">anchors</span>: <span class="code-number">84</span>,
+  <span class="code-property">facets</span>: [<span class="code-string">'dao'</span>, <span class="code-string">'xin'</span>, <span class="code-string">'xing'</span>],
+  <span class="code-property">agents</span>: [<span class="code-string">'mingjing'</span>, <span class="code-string">'mingde'</span>, <span class="code-string">'mingpin'</span>, 
+           <span class="code-string">'mingma'</span>, <span class="code-string">'mingzhen'</span>, <span class="code-string">'mingcha'</span>],
+});
+
+<span class="code-keyword">const</span> <span class="code-variable">result</span> = <span class="code-keyword">await</span> <span class="code-variable">system</span>.<span class="code-method">collaborate</span>({
+  <span class="code-property">task</span>: <span class="code-string">'合参审查'</span>,
+  <span class="code-property">mode</span>: <span class="code-string">'swarm'</span>,
+});
+
+console.<span class="code-method">log</span>(<span class="code-variable">result</span>.<span class="code-property">quality</span>); <span class="code-comment">// 高质量判断</span></code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section id="system" class="features">
+        <div class="section-header">
+            <h2>系统架构</h2>
+            <p>道心行三面向，六面Agent协作</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3>信念系统</h3>
+                <p>84个信念锚点，道心行三面向。共振检测、漂移学习、经验沉淀。让Agent具备自我感知和进化能力。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                        <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>蜂群调度</h3>
+                <p>智能路由、并行执行、多视角汇聚。六面Agent协作完成复杂任务，合参机制确保高质量判断。</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M12 3v18M3 12h18M5.6 5.6l12.8 12.8M18.4 5.6L5.6 18.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>求真求效</h3>
+                <p>明真验证、明察对抗，双向校验确保正确性。经验流设计让知识持续流动和进化。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="agents" class="team">
+        <div class="section-header">
+            <h2>Agent状态</h2>
+            <p>六面Agent，实时协作中</p>
+        </div>
+        <div class="team-grid">
+            <div class="team-card">
+                <div class="team-avatar">明</div>
+                <h3>明镜</h3>
+                <p class="team-role">道 · 总管</p>
+                <p class="team-desc">全局协调、任务分配、进度跟踪</p>
+                <div class="status-badge">运行中</div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">明</div>
+                <h3>明德</h3>
+                <p class="team-role">道 · 战略</p>
+                <p class="team-desc">方向判断、战略取舍、优先级排序</p>
+                <div class="status-badge">运行中</div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">明</div>
+                <h3>明品</h3>
+                <p class="team-role">道 · 架构</p>
+                <p class="team-desc">结构设计、模块拆分、接口定义</p>
+                <div class="status-badge">运行中</div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">明</div>
+                <h3>明码</h3>
+                <p class="team-role">心 · 创造</p>
+                <p class="team-desc">编码实现、技术落地、功能开发</p>
+                <div class="status-badge">运行中</div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">明</div>
+                <h3>明真</h3>
+                <p class="team-role">行 · 验证</p>
+                <p class="team-desc">正向验证、正确性检查、通过/不通过</p>
+                <div class="status-badge">运行中</div>
+            </div>
+            <div class="team-card">
+                <div class="team-avatar">明</div>
+                <h3>明察</h3>
+                <p class="team-role">行 · 对抗</p>
+                <p class="team-desc">反向验证、寻找遗漏、对抗性测试</p>
+                <div class="status-badge">运行中</div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <p>© 2026 STOS · 求真系统. 人机智能共同体.</p>
+        </div>
+    </footer>
+</body>
+</html>
