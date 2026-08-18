@@ -27,7 +27,7 @@
             <a href="#agents">Agent</a>
         </div>
         <a href="https://github.com/1jehuang/jcode" target="_blank" class="btn btn-secondary btn-sm">GitHub</a>
-        <button class="nav-toggle" id="nav-toggle" aria-label="菜单">
+        <button class="nav-toggle hamburger" id="nav-toggle" aria-label="菜单">
             <span></span><span></span><span></span>
         </button>
     </div>
@@ -196,7 +196,7 @@
                         <span class="layer-desc">宇宙和存在的基本规律</span>
                         <button class="layer-toggle" aria-label="展开">+</button>
                     </div>
-                    <div class="layer-content">
+                    <div class="layer-content layer-body">
                         <ol class="belief-list">
                             <li><strong>一体同源</strong>：万物来自同一源头，彼此相连</li>
                             <li><strong>未知即真相</strong>：未知不是障碍，而是真相的另一种形式</li>
@@ -267,7 +267,7 @@
             <p class="sub-desc">当 Agent 面对决策时，系统计算当前情境与 84 个锚点的共振程度，输出五档信号。</p>
 
             <!-- 五档信号 -->
-            <div class="signal-bars">
+            <div id="signal-bar" class="signal-bars">
                 <div class="signal-row">
                     <span class="signal-tag signal-pp">++</span>
                     <div class="signal-bar"><div class="signal-fill" style="width:100%;background:var(--success)"></div></div>
@@ -301,7 +301,7 @@
                 <div class="demo-input-wrap">
                     <input type="text" id="resonance-input" class="demo-input" placeholder="输入一段文本，例如：我们需要完成这个编码任务并沉淀经验">
                 </div>
-                <div id="resonance-result" class="demo-result">
+                <div id="resonance-anchors" class="demo-result">
                     <p class="demo-placeholder">输入文本后，系统将模拟信念共振检测...</p>
                 </div>
             </div>
@@ -473,17 +473,17 @@
                     <span class="report-total-score gradient-text">87 / 100</span>
                 </div>
                 <div class="report-bar-wrap">
-                    <div class="report-bar"><div class="report-bar-fill" data-width="87" style="width:0%"></div></div>
+                    <div class="report-bar progress-bar"><div class="report-bar-fill progress-fill" data-width="87" style="width:0%"></div></div>
                 </div>
                 <div class="report-items">
-                    <div class="report-item"><span class="ri-name">信念系统</span><div class="report-bar"><div class="report-bar-fill" data-width="95" style="width:0%"></div></div><span class="ri-score">95</span></div>
-                    <div class="report-item"><span class="ri-name">健康系统</span><div class="report-bar"><div class="report-bar-fill" data-width="90" style="width:0%"></div></div><span class="ri-score">90</span></div>
-                    <div class="report-item"><span class="ri-name">记忆系统</span><div class="report-bar"><div class="report-bar-fill" data-width="72" style="width:0%"></div></div><span class="ri-score">72</span></div>
-                    <div class="report-item"><span class="ri-name">自我觉知</span><div class="report-bar"><div class="report-bar-fill" data-width="80" style="width:0%"></div></div><span class="ri-score">80</span></div>
-                    <div class="report-item"><span class="ri-name">情感系统</span><div class="report-bar"><div class="report-bar-fill" data-width="35" style="width:0%"></div></div><span class="ri-score">35</span></div>
-                    <div class="report-item"><span class="ri-name">保护系统</span><div class="report-bar"><div class="report-bar-fill" data-width="75" style="width:0%"></div></div><span class="ri-score">75</span></div>
-                    <div class="report-item"><span class="ri-name">进化系统</span><div class="report-bar"><div class="report-bar-fill" data-width="78" style="width:0%"></div></div><span class="ri-score">78</span></div>
-                    <div class="report-item"><span class="ri-name">意识枢纽</span><div class="report-bar"><div class="report-bar-fill" data-width="92" style="width:0%"></div></div><span class="ri-score">92</span></div>
+                    <div class="report-item"><span class="ri-name">信念系统</span><div class="report-bar progress-bar"><div class="report-bar-fill progress-fill" data-width="95" style="width:0%"></div></div><span class="ri-score">95</span></div>
+                    <div class="report-item"><span class="ri-name">健康系统</span><div class="report-bar progress-bar"><div class="report-bar-fill progress-fill" data-width="90" style="width:0%"></div></div><span class="ri-score">90</span></div>
+                    <div class="report-item"><span class="ri-name">记忆系统</span><div class="report-bar progress-bar"><div class="report-bar-fill progress-fill" data-width="72" style="width:0%"></div></div><span class="ri-score">72</span></div>
+                    <div class="report-item"><span class="ri-name">自我觉知</span><div class="report-bar progress-bar"><div class="report-bar-fill progress-fill" data-width="80" style="width:0%"></div></div><span class="ri-score">80</span></div>
+                    <div class="report-item"><span class="ri-name">情感系统</span><div class="report-bar progress-bar"><div class="report-bar-fill progress-fill" data-width="35" style="width:0%"></div></div><span class="ri-score">35</span></div>
+                    <div class="report-item"><span class="ri-name">保护系统</span><div class="report-bar progress-bar"><div class="report-bar-fill progress-fill" data-width="75" style="width:0%"></div></div><span class="ri-score">75</span></div>
+                    <div class="report-item"><span class="ri-name">进化系统</span><div class="report-bar progress-bar"><div class="report-bar-fill progress-fill" data-width="78" style="width:0%"></div></div><span class="ri-score">78</span></div>
+                    <div class="report-item"><span class="ri-name">意识枢纽</span><div class="report-bar progress-bar"><div class="report-bar-fill progress-fill" data-width="92" style="width:0%"></div></div><span class="ri-score">92</span></div>
                 </div>
             </div>
         </div>
@@ -670,27 +670,27 @@
 
         <div class="stats-grid fade-in">
             <div class="stats-item">
-                <span class="stats-num" data-target="84">0</span>
+                <span class="stats-num stat-number counter" data-target="84">0</span>
                 <span class="stats-label">信念锚点</span>
             </div>
             <div class="stats-item">
-                <span class="stats-num" data-target="8">0</span>
+                <span class="stats-num stat-number counter" data-target="8">0</span>
                 <span class="stats-label">子系统</span>
             </div>
             <div class="stats-item">
-                <span class="stats-num" data-target="6">0</span>
+                <span class="stats-num stat-number counter" data-target="6">0</span>
                 <span class="stats-label">Agent 角色</span>
             </div>
             <div class="stats-item">
-                <span class="stats-num" data-target="28">0</span>
+                <span class="stats-num stat-number counter" data-target="28">0</span>
                 <span class="stats-label">MCP 工具</span>
             </div>
             <div class="stats-item">
-                <span class="stats-num" data-target="128">0</span>
+                <span class="stats-num stat-number counter" data-target="128">0</span>
                 <span class="stats-label">经验沉淀</span>
             </div>
             <div class="stats-item">
-                <span class="stats-num" data-target="6000">0</span>
+                <span class="stats-num stat-number counter" data-target="6000">0</span>
                 <span class="stats-label">行 Rust 代码</span>
             </div>
         </div>
