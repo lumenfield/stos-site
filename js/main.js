@@ -168,7 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!demoBox) return;
 
         const input = demoBox.querySelector('#resonance-input');
-        const resultArea = demoBox.querySelector('#resonance-result');
+        const resultArea = demoBox.querySelector('#resonance-anchors');
         const signalBar = demoBox.querySelector('#signal-bar');
         const anchorsList = demoBox.querySelector('#resonance-anchors');
 
@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
     /** 带交错延迟的进度条动画 */
     function animateProgressBars(bars) {
         bars.forEach((bar, index) => {
-            const targetPercent = bar.getAttribute('data-percent') || 0;
+            const targetPercent = bar.querySelector('.progress-fill')?.getAttribute('data-width') || bar.getAttribute('data-percent') || 0;
             const fill = bar.querySelector('.progress-fill');
             if (!fill) return;
 
